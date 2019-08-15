@@ -51,13 +51,14 @@ class LoginForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleLogin} className="credentialForm">
-        <h1 className="credentialTitle">Welcome back!</h1>
+        <h1 className="credentialTitle">Join Stay Smitten!</h1>
         <TextField
           id="firstName-input"
           label="First Name"
           className="firstNameInput"
           autoComplete="current-firstName"
           margin="normal"
+          variant="outlined"
     
         />
         <TextField
@@ -109,7 +110,7 @@ class LoginForm extends Component {
           variant="outlined"
         />
         <button className="submitButton" type="submit">
-          Login
+          Get Stay Smitten Texts
         </button>
         
       </form>

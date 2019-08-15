@@ -41,40 +41,8 @@ class App extends React.Component {
     .catch(err => alertErrorHandler(err));    
   };
 
-  // handlePopulateData = async() => {
-  //   const dataTemp = []
-  //   await this.state.transactions.forEach(trans => {
-  //     var residentName = '';
-  //     var residentRoom = '';
-  //     var userName = '';
-  //     var indexOfResName = this.state.residents.findIndex(i => i.ResidentId === trans.ResidentId);
-  //     var indexOfUserName = this.state.users.findIndex(i => i.username === trans.ServicedBy);
-  //     if(indexOfResName >= 0) {
-  //       residentName = this.state.residents[indexOfResName].SortName;
-  //       residentRoom = this.state.residents[indexOfResName].Room;
-  //     }
-  //     if(indexOfUserName >= 0) {
-  //       userName = this.state.users[indexOfUserName].SortName || trans.ServicedBy;
-  //     }
-  //     dataTemp.push( {
-  //       'name': residentName,
-  //       'serviceCode': trans.ServiceCode,
-  //       'serviceBy': userName || trans.ServicedBy,
-  //       'id': trans.ResidentId,
-  //       'room': residentRoom,
-  //       'date': trans.TransDate,
-  //     });
-  //   });
-  //   this.setState({ 
-  //     tableData: dataTemp,
-  //     loading: false,
-  //   });  
-  // }
-
   handleLogin = async(credentials) => {
-    // console.log(credentials);
     await this.handleAPICalls(credentials);
-    // this.handlePopulateData();
   }
 
 
