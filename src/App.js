@@ -52,7 +52,9 @@ class App extends React.Component {
         <header className="header">
           <img src={logo} className="headerLogo" alt="logo" />
         </header>
-        <LoginForm handleLogin={this.handleLogin}/>
+        <div className="formWrapper">
+         <LoginForm handleLogin={this.handleLogin}/>
+        </div>
       </div>
     );
   }

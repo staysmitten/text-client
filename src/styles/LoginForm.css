@@ -1,13 +1,13 @@
 .credentialForm {
   display: flex;
   flex-flow: column;
-  margin: 2rem auto;
-  background: #ececec;
+  margin: auto;
+  background: #fff;
   color: black;
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: left;
-  width: 27rem;
+  width: 25rem;
 }
 
 .submitButton {
