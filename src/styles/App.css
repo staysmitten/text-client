@@ -1,0 +1,28 @@
+/* .App {
+  text-align: center;
+} */
+
+.headerLogo {
+  width: 12rem;
+  margin-top: 3px;
+}
+
+.header {
+  background-color: #ececec;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1);
+  height: 68px;
+  padding: 10px 20px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
