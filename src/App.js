@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './assets/img/staySmittenLogo.jpg';
 import './styles/App.css';
+import API, { alertErrorHandler } from './services/API';
 // components
 import LoginForm from './components/LoginForm';
 
@@ -20,6 +21,25 @@ class App extends React.Component {
       },
     };
   }
+
+
+  handleAPICalls = async credentials => {
+    // Login Request
+    await API.post('https://stay-smitten.herokuapp.com/api/user/add/', {
+      firstName: credentials.firstNameInput,
+      lastName: credentials.lastNameInput,
+      partnerFirstName: credentials.partnerFirstNameInput,
+      partnerLastName: credentials.partnerLastNameInput,
+      number: credentials.phoneNumber,
+      partnerNumber: credentials.partnerPhoneNumber,
+      email: credentials.email,
+      })
+      .then(response => {
+        // Sets session token
+        console.log(response);
+      })
+    .catch(err => alertErrorHandler(err));    
+  };
 
   // handlePopulateData = async() => {
   //   const dataTemp = []
@@ -52,8 +72,8 @@ class App extends React.Component {
   // }
 
   handleLogin = async(credentials) => {
-    console.log(credentials);
-    // await this.handleAPICalls(credentials);
+    // console.log(credentials);
+    await this.handleAPICalls(credentials);
     // this.handlePopulateData();
   }
 
