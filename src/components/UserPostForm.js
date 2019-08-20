@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
+import Swal from 'sweetalert2';
 import '../styles/UserPostForm.css';
 
 class UserPostForm extends Component {
@@ -32,26 +33,92 @@ class UserPostForm extends Component {
     this.setState({ [name]: value });
   };
 
-  /**
-   * Login event handler
+    /**
+   * Handle form input changes
    * @param {Event} event Submit event
    */
-  handleLogin = event => {
+  handleUserPost = event => {
     event.preventDefault();
-    this.props.handleLogin({
-      firstNameInput: document.getElementById('firstName-input').value,
-      lastNameInput: document.getElementById('lastName-input').value,
-      partnerFirstNameInput: document.getElementById('partnerFirstName-input').value,
-      partnerLastNameInput: document.getElementById('partnerLastName-input').value,
-      phoneNumber: document.getElementById('number-input').value,
-      partnerPhoneNumber: document.getElementById('partnerNumber-input').value,
-      email: document.getElementById('email-input').value,
-    });
+    const {
+      firstNameInput,
+      lastNameInput,
+      phoneNumber,
+      partnerFirstNameInput,
+      partnerLastNameInput,
+      partnerPhoneNumber,
+      email,
+    } = this.state;
+    // Regex
+    const emailCheck = /\S+@\S+\.\S+/;
+    const phoneCheck = /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/;
+    const nameCheck = /^[a-z ,.'-]+$/i;
+    // FIXME: Create a validation middleware we can use instead of these checks here.
+    // Validates inputs
+    if (nameCheck.test(String(firstNameInput).toLowerCase()) !== true) {
+      Swal.fire({
+        type: 'error',
+        text: 'Enter a first name',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else if (nameCheck.test(String(lastNameInput).toLowerCase()) !== true) {
+      Swal.fire({
+        type: 'error',
+        text: 'Enter a last name',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else if (phoneCheck.test(String(phoneNumber).toLowerCase()) !== true) {
+      Swal.fire({
+        type: 'error',
+        text: 'Enter a valid phone number',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else if (nameCheck.test(String(partnerFirstNameInput).toLowerCase()) !== true) {
+      Swal.fire({
+        type: 'error',
+        text: "Enter your partner's first name",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else if (nameCheck.test(String(partnerLastNameInput).toLowerCase()) !== true) {
+      Swal.fire({
+        type: 'error',
+        text: "Enter your partner's last name",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else if (phoneCheck.test(String(partnerPhoneNumber).toLowerCase()) !== true) {
+      Swal.fire({
+        type: 'error',
+        text: 'Enter a valid partner phone number',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else if (emailCheck.test(String(email).toLowerCase()) !== true) {
+      Swal.fire({
+        type: 'error',
+        text: 'Enter a valid email',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+      this.props.handleUserPost({
+        firstNameInput: document.getElementById('firstNameInput').value,
+        lastNameInput: document.getElementById('lastNameInput').value,
+        partnerFirstNameInput: document.getElementById('partnerFirstNameInput').value,
+        partnerLastNameInput: document.getElementById('partnerLastNameInput').value,
+        phoneNumber: document.getElementById('phoneNumber').value,
+        partnerPhoneNumber: document.getElementById('partnerPhoneNumber').value,
+        email: document.getElementById('email').value,
+      });
+    }
   };
 
   render() {
     return (
-      <form onSubmit={this.handleLogin} className="credentialForm">
+      <form onSubmit={this.handleUserPost} className="credentialForm">
         <h1 className="credentialTitle">Join Stay Smitten!</h1>
         <TextField
           id="firstNameInput"
@@ -133,7 +200,7 @@ class UserPostForm extends Component {
 }
 
 UserPostForm.propTypes = {
-  handleLogin: PropTypes.func.isRequired,
+  handleUserPost: PropTypes.func.isRequired,
 };
 
 export default UserPostForm;

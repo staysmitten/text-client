@@ -41,7 +41,7 @@ class App extends React.Component {
     .catch(err => alertErrorHandler(err));    
   };
 
-  handleLogin = async(credentials) => {
+  handleUserPost = async(credentials) => {
     await this.handleAPICalls(credentials);
   }
 
@@ -53,7 +53,7 @@ class App extends React.Component {
           <img src={logo} className="headerLogo" alt="logo" />
         </header>
         <div className="formWrapper">
-         <UserPostForm handleLogin={this.handleLogin}/>
+         <UserPostForm handleUserPost={this.handleUserPost}/>
         </div>
       </div>
     );
