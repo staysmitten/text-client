@@ -3,7 +3,7 @@ import logo from './assets/img/staySmittenLogo.jpg';
 import './styles/App.css';
 import API, { alertErrorHandler } from './services/API';
 // components
-import LoginForm from './components/LoginForm';
+import UserPostForm from './components/UserPostForm';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class App extends React.Component {
 
 
   handleAPICalls = async credentials => {
-    // Login Request
+    // User Post Request
     await API.post('https://stay-smitten.herokuapp.com/api/user/add/', {
       firstName: credentials.firstNameInput,
       lastName: credentials.lastNameInput,
@@ -53,7 +53,7 @@ class App extends React.Component {
           <img src={logo} className="headerLogo" alt="logo" />
         </header>
         <div className="formWrapper">
-         <LoginForm handleLogin={this.handleLogin}/>
+         <UserPostForm handleLogin={this.handleLogin}/>
         </div>
       </div>
     );
