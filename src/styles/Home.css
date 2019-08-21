@@ -1,0 +1,11 @@
+.formWrapper{
+    display: flex;
+    flex-flow: column;
+    margin: 2rem auto;
+    background: #ececec;
+    color: black;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    width: 30rem;
+}
