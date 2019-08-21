@@ -1,5 +1,7 @@
 import Axios from 'axios';
 import Swal from 'sweetalert2';
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '/../.env') });
 
 
 // Headers required to make calls to the backend
@@ -12,7 +14,7 @@ const params = {};
 
 // Aura server instance
 const instance = Axios.create({
-  baseURL: process.env.STAY_SMITTEN_SERVER_API,
+  baseURL: process.env.REACT_APP_STAYSMITTEN_SERVER_API,
   timeout: 20000,
   headers,
   params,

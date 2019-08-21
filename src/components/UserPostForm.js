@@ -11,9 +11,9 @@ class UserPostForm extends Component {
     this.state = {
       firstNameInput: '',
       lastNameInput: '',
+      phoneNumber: '',
       partnerFirstNameInput: '',
       partnerLastNameInput: '',
-      phoneNumber: '',
       partnerPhoneNumber: '',
       email: '',
     };

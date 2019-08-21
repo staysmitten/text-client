@@ -1,0 +1,26 @@
+
+.Admin {
+    text-align: center;
+}
+
+.tableHeader{
+    background-color: #282c34;
+    color: white;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    font-size: 40px;
+    width: 20rem;
+    display: inline-block;
+  }
+  
+  .tableBorder {
+    background-color: #282c34;
+    width: 94vw;
+    display: inline-block;
+    padding-top: 1rem;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+  }

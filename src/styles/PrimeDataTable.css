@@ -1,0 +1,28 @@
+.p-datatable {
+    display: inline-block;
+    width: 90vw;
+  }
+  
+  @media all and (min-width: 1228px) {
+    .p-datatable-row td {
+      padding: 6px 27px !important;
+    }
+  }
+  
+
+  .locationWrap {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+  
+  .locationWrap::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0.8rem;
+    right: 0.7em;
+    color: #515151;
+    font-size: 19px;
+    pointer-events: none;
+  }  

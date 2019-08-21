@@ -1,12 +1,9 @@
 import React from 'react';
 import logo from './assets/img/staySmittenLogo.jpg';
 import './styles/App.css';
-import API, { alertErrorHandler } from './services/API';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Home, FourOhFour } from './pages';
+import { Home, Admin, FourOhFour } from './pages';
 import Header from './components/Header';
-// components
-import UserPostForm from './components/UserPostForm';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,6 +20,7 @@ class App extends React.Component {
         <Header headerLogo={logo} />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/tempadmin" exact component={Admin} />
           {/* <ProtectedRoute
             path="/secretadmin"
             isAuthenticated={isAuthenticated}
