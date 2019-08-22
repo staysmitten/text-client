@@ -9,11 +9,9 @@ class UserPostForm extends Component {
     super(props);
 
     this.state = {
-      firstNameInput: '',
-      lastNameInput: '',
+      fullNameInput: '',
       phoneNumber: '',
-      partnerFirstNameInput: '',
-      partnerLastNameInput: '',
+      partnerFullNameInput: '',
       partnerPhoneNumber: '',
       email: '',
     };
@@ -40,11 +38,9 @@ class UserPostForm extends Component {
   handleUserPost = event => {
     event.preventDefault();
     const {
-      firstNameInput,
-      lastNameInput,
+      fullNameInput,
       phoneNumber,
-      partnerFirstNameInput,
-      partnerLastNameInput,
+      partnerFullNameInput,
       partnerPhoneNumber,
       email,
     } = this.state;
@@ -54,17 +50,10 @@ class UserPostForm extends Component {
     const nameCheck = /^[a-z ,.'-]+$/i;
     // FIXME: Create a validation middleware we can use instead of these checks here.
     // Validates inputs
-    if (nameCheck.test(String(firstNameInput).toLowerCase()) !== true) {
+    if (nameCheck.test(String(fullNameInput).toLowerCase()) !== true) {
       Swal.fire({
         type: 'error',
-        text: 'Enter a first name',
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    } else if (nameCheck.test(String(lastNameInput).toLowerCase()) !== true) {
-      Swal.fire({
-        type: 'error',
-        text: 'Enter a last name',
+        text: 'Enter your full name',
         showConfirmButton: false,
         timer: 1500,
       });
@@ -75,17 +64,10 @@ class UserPostForm extends Component {
         showConfirmButton: false,
         timer: 1500,
       });
-    } else if (nameCheck.test(String(partnerFirstNameInput).toLowerCase()) !== true) {
+    } else if (nameCheck.test(String(partnerFullNameInput).toLowerCase()) !== true) {
       Swal.fire({
         type: 'error',
-        text: "Enter your partner's first name",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    } else if (nameCheck.test(String(partnerLastNameInput).toLowerCase()) !== true) {
-      Swal.fire({
-        type: 'error',
-        text: "Enter your partner's last name",
+        text: "Enter your partner's full name",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -105,11 +87,9 @@ class UserPostForm extends Component {
       });
     } else {
       this.props.handleUserPost({
-        firstNameInput: document.getElementById('firstNameInput').value,
-        lastNameInput: document.getElementById('lastNameInput').value,
-        partnerFirstNameInput: document.getElementById('partnerFirstNameInput').value,
-        partnerLastNameInput: document.getElementById('partnerLastNameInput').value,
+        fullNameInput: document.getElementById('fullNameInput').value,
         phoneNumber: document.getElementById('phoneNumber').value,
+        partnerFullNameInput: document.getElementById('partnerFullNameInput').value,
         partnerPhoneNumber: document.getElementById('partnerPhoneNumber').value,
         email: document.getElementById('email').value,
       });
@@ -121,23 +101,13 @@ class UserPostForm extends Component {
       <form onSubmit={this.handleUserPost} className="credentialForm">
         <h1 className="credentialTitle">Join Stay Smitten!</h1>
         <TextField
-          id="firstNameInput"
-          label="First Name"
-          className="firstNameInput"
-          autoComplete="current-firstName"
+          id="fullNameInput"
+          label="Full Name"
+          className="fullNameInput"
+          autoComplete="current-fullName"
           margin="normal"
           variant="outlined"
-          value={this.state.firstNameInput}
-          onChange={this.handleInputChange}
-        />
-        <TextField
-          id="lastNameInput"
-          label="Last Name"
-          className="lastNameInput"
-          autoComplete="current-lastName"
-          margin="normal"
-          variant="outlined"
-          value={this.state.lastNameInput}
+          value={this.state.fullNameInput}
           onChange={this.handleInputChange}
         />
           <TextField
@@ -151,23 +121,13 @@ class UserPostForm extends Component {
             onChange={this.handleInputChange}
           />
         <TextField
-          id="partnerFirstNameInput"
-          label="Partner First Name"
-          className="partnerFirstNameInput"
-          autoComplete="current-partnerFirstName"
+          id="partnerFullNameInput"
+          label="Partner Full Name"
+          className="partnerFullNameInput"
+          autoComplete="current-partnerFullName"
           margin="normal"
           variant="outlined"
-          value={this.state.partnerFirstNameInput}
-          onChange={this.handleInputChange}
-        />
-        <TextField
-          id="partnerLastNameInput"
-          label="Partner Last Name"
-          className="partnerLastNameInput"
-          autoComplete="current-partnerLastName"
-          margin="normal"
-          variant="outlined"
-          value={this.state.partnerLastNameInput}
+          value={this.state.partnerFullNameInput}
           onChange={this.handleInputChange}
         />
         <TextField

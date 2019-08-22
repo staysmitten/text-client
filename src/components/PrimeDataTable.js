@@ -40,21 +40,20 @@ class PrimeDataTable extends React.Component {
     onClick={() => onRefresh()}/>;
 
     if (loading) {
+      console.log('loading');
       return (
         <div className="loaderWrapper">
-          <Loader type="Triangle" color="#61dbfb" height='30vh' width="100%" />
+          <Loader type="Hearts" color="#ce3e83" height={300} width={300} />
         </div>
       );
     }
 
     return (
       <DataTable value={products} paginator={true} paginatorLeft={paginatorLeft} rows={10} rowsPerPageOptions={[5,10,20]} header={header} ref={(el) => { this.dt = el; }} globalFilter={this.state.globalFilter} emptyMessage="No records found">
-          <Column field="firstName" header="First Name" filter={true} sortable={true} />
-          <Column field="lastName" header="Last Name" filter={true} sortable={true} />
-          <Column field="phoneNumber" header="Phone Number" filter={true} sortable={true} />
-          <Column field="partnerFirstName" header="Partner First Name" filter={true} sortable={true} />
-          <Column field="partnerLastName" header="Partner Last Name" filter={true} sortable={true} />
-          <Column field="partnerPhoneNumber" header="Partner Phone Number" filter={true} sortable={true} />
+          <Column field="fullName" header="Full Name" filter={true} sortable={true} />
+          <Column field="number" header="Phone Number" filter={true} sortable={true} />
+          <Column field="partnerFullName" header="Partner Full Name" filter={true} sortable={true} />
+          <Column field="partnerNumber" header="Partner Phone Number" filter={true} sortable={true} />
           <Column field="email" header="Email" filter={true} sortable={true} />
       </DataTable>
     );

@@ -17,13 +17,13 @@
     align-self: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #ce3e83;
+    background-color: var(--ss-main);
     color: white;
     border: none;
   }
   
   .submitButton:hover {
-    background-color: #cd3542;
+    background-color: var(--ss-dark);
     color: white;
   }
   

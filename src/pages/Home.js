@@ -11,11 +11,9 @@ class Home extends React.Component {
 
     this.state = {
       userData: {
-        firstName: '',
-        lastName: '',
-        partnerFirstName: '',
-        partnerLastName: '',
+        fullName: '',
         number: '',
+        partnerFullName: '',
         partnerNumber: '',
         email: '',
       },
@@ -25,12 +23,10 @@ class Home extends React.Component {
 
   handleAPICalls = async credentials => {
     // User Post Request
-    await API.post('https://stay-smitten.herokuHome.com/api/user/add/', {
-      firstName: credentials.firstNameInput,
-      lastName: credentials.lastNameInput,
-      partnerFirstName: credentials.partnerFirstNameInput,
-      partnerLastName: credentials.partnerLastNameInput,
+    await API.post('/api/user/add/', {
+      fullName: credentials.fullNameInput,
       number: credentials.phoneNumber,
+      partnerFullName: credentials.partnerFullNameInput,
       partnerNumber: credentials.partnerPhoneNumber,
       email: credentials.email,
       })
@@ -49,9 +45,14 @@ class Home extends React.Component {
   render() {
     return ( 
         <div className="Home">
-            <div className="formWrapper">
+          <div className='tagline'>
+            <p>Stay Smitten sends a short daily 2-part text message to you and your romantic partner</p>
+            <p>Giving you both a shared moment of joy and surprise in your busy lives!</p>
+          </div>
+          <div className="formWrapper">
             <UserPostForm handleUserPost={this.handleUserPost}/>
-            </div>
+            <p className="formDetails">Hello! We are currently in beta test mode. If you would like to join Stay Smitten now and be a part of crafting our product into something couples all around the world want and love, please fill out the information below! </p>
+          </div>
         </div>
     );
   }

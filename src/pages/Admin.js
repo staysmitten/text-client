@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/Admin.css';
 import API, { alertErrorHandler } from '..//services/API';
-import Axios from 'axios';
 // components
 import LoginForm from '../components/LoginForm';
 import PrimeDataTable from '../components/PrimeDataTable';
@@ -48,16 +47,20 @@ class Admin extends React.Component {
     // .catch(err => alertErrorHandler(err));
 
     // MOCK Login
-    this.setState({ 
+      await API.get('/', {})
+    .then(response => {
+      // Sets session token
+      this.setState({ 
+        sessionToken: response.data.sessionToken,
         loading: true,
         loggedIn: true,
         showTable: true,
-    });  
-    this.handlePopulateData();    
+      });  
+    });
   };
 
   handlePopulateData = async() => {
-      console.log(process.env.REACT_APP_STAYSMITTEN_SERVER_API);
+      console.log(this.loading);
     if (this.state.loggedIn) {
         // Table Data Get Request
         await API.get(`/api/user/`, {
@@ -75,9 +78,8 @@ class Admin extends React.Component {
   }
 
   handleLogin = async(credentials) => {
-    Axios.defaults.baseURL = process.env.STAY_SMITTEN_SERVER_API;
     await this.handleAPICalls(credentials);
-    this.handlePopulateData();  
+    setTimeout(()=> this.handlePopulateData(), 2000);
   }
 
   handleRefresh = async() => {
@@ -101,11 +103,15 @@ class Admin extends React.Component {
     return (
       <div className="Admin">
         {this.state.loggedIn ? null : (
-          <LoginForm handleLogin={this.handleLogin}/>
+            <div className="formWrapper">
+            <LoginForm handleLogin={this.handleLogin}/>
+            </div>
         )}
         {this.state.showTable ? (
           <div>
-            <p className="tableHeader">Transactions</p>
+            <div className="tableHeaderWrapper">
+              <p className="tableHeader">Transactions</p>
+            </div>
             <div className="tableBorder">
               <PrimeDataTable loading={this.state.loading} products={this.state.tableData} onRefresh={this.handleRefresh} />
             </div>

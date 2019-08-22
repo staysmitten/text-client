@@ -1,9 +1,11 @@
 import React from 'react';
 import logo from './assets/img/staySmittenLogo.jpg';
+import footerLogo from './assets/img/StaySmittenCircleBorderLogo.png'
 import './styles/App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Home, Admin, FourOhFour } from './pages';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,6 +36,7 @@ class App extends React.Component {
           /> */}
           <Route component={FourOhFour} />
         </Switch>
+        <Footer footerLogo={footerLogo}></Footer>
       </BrowserRouter>
     );
   }

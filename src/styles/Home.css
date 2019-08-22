@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column;
     margin: 2rem auto;
-    background: #ececec;
+    background: var(--ss-lightest);
     color: black;
     padding: 2rem;
     border-radius: 0.5rem;
