@@ -31,5 +31,5 @@ html{
   font-family: Poppins;
   height: 100%;
   display: grid;
-  grid-template-rows: 68px 1fr;
+  grid-template-rows: 6rem 1fr;
 }

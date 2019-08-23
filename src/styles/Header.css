@@ -5,7 +5,9 @@
 
 .header {
     background-color: var(--ss-gray);
+    border-top: 4px solid var(--ss-main);
     box-shadow: 0 3px 3px rgba(0,0,0,.1);
-    height: 68px;
+    height: 6rem;
     padding: 10px 20px;
+    z-index: 2;
 }

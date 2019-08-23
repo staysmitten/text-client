@@ -21,3 +21,30 @@
   color: #777777;
   margin: 0;
 }
+
+.socialIcons{
+  text-align: center;
+}
+
+.socialIcons a{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+
+.facebookIcon{
+  background-image: url(../assets/img/icons/facebook.png);    
+  background-repeat: no-repeat;
+  width: 50px;
+}
+
+.instaIcon{
+  background-image: url(../assets/img/icons/instagram.png);
+  width: 50px;
+}
+
+.twitterIcon{
+  background-image: url(../assets/img/icons/twitter.png);
+  width: 50px;
+}

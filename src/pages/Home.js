@@ -49,7 +49,6 @@ class Home extends React.Component {
           <section className="signUpBanner">
             <div className="column1">
               <div className='tagline'>
-                <h2>Stay Smitten sends a short daily 2-part text message to you and your romantic partner</h2>
                 <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2>
               </div>
               <div className="formWrapper">

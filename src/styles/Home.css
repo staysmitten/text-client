@@ -1,3 +1,7 @@
+.Home{
+    z-index: 0;
+}
+
 .formWrapper{
     display: flex;
     flex-flow: column;
@@ -19,11 +23,12 @@
     font-family: Poppins;
     font-weight: 700;
     font-size: 27px;
+    margin-bottom: 3rem;
 }
 
 .signUpBanner{
     display: grid;
-    grid-template-columns: 36rem 1fr;
+    grid-template-columns: 40rem 1fr;
     background-image: url(../assets/img/stock/couple3.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
