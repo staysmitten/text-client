@@ -5,7 +5,19 @@
 
 .footer {
   background-color: var(--ss-gray);
-  height: 11rem;
+  height: 12rem;
   text-align: center;
   padding: 10px 20px;
+}
+
+.footerDescription{
+  font-family: Poppins;
+  color: #777777;
+  margin: 0;
+}
+
+.footerSS{
+  font-family: Poppins;
+  color: #777777;
+  margin: 0;
 }
