@@ -6,17 +6,19 @@
     display: flex;
     flex-flow: column;
     margin: 2rem auto;
-    background: var(--ss-lightest);
+    background: white;
     color: black;
     padding: 2rem;
     border-radius: 20px;
     text-align: left;
     width: 30rem;
-    box-shadow: 0 15px 50px rgba(226,160,37,.5);
+    box-shadow: 0 15px 50px rgb(27, 27, 27, 0.2);
 }
 
 .tagline{
-    align-content: center;
+    align-content: center;    
+    margin: 0rem auto 4rem auto;
+    width: 30rem;
 }
 
 .tagline h2{
@@ -24,23 +26,30 @@
     font-weight: 700;
     font-size: 27px;
     margin-bottom: 3rem;
+    width: 32rem;
 }
 
 .signUpBanner{
     display: grid;
-    grid-template-columns: 40rem 1fr;
-    background-image: url(../assets/img/stock/couple3.jpeg);
+    grid-template-columns: 58% 1fr;
+    /* background-image: url(../assets/img/stock/couple3.jpeg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .column1{
     width: 100%;
-    padding-left: 8rem;
-    padding-top: 3rem;
+    /* padding-left: 8rem; */
+    padding-top: 2.2rem;
     padding-bottom: 5rem;
+    background-image: url(../assets/img/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .column2{
-    width: 100%;    
+    width: 100%;   
+    background-image: url(../assets/img/stock/couple3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; 
 }

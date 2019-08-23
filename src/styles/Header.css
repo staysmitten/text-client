@@ -5,7 +5,7 @@
 
 .header {
     background-color: var(--ss-gray);
-    border-top: 4px solid var(--ss-main);
+    border-top: 8px solid var(--ss-table);
     box-shadow: 0 3px 3px rgba(0,0,0,.1);
     height: 6rem;
     padding: 10px 20px;

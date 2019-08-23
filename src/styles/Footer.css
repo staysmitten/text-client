@@ -5,6 +5,7 @@
 .footer {
   background-color: var(--ss-gray);
   height: 22rem;
+  border-bottom: 8px solid var(--ss-table);
   text-align: center;
   padding: 2rem 20px 0rem 20px;
 }
