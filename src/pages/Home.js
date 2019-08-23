@@ -54,7 +54,6 @@ class Home extends React.Component {
               </div>
               <div className="formWrapper">
                 <UserPostForm handleUserPost={this.handleUserPost}/>
-                <p className="formDetails">Hello! We are currently in beta test mode. If you would like to join Stay Smitten now and be a part of crafting our product into something couples all around the world want and love, please fill out the information below! </p>
               </div>
             </div>
             <div className="column2">

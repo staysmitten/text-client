@@ -5,9 +5,10 @@
     background: var(--ss-lightest);
     color: black;
     padding: 2rem;
-    border-radius: 0.5rem;
+    border-radius: 20px;
     text-align: left;
     width: 30rem;
+    box-shadow: 0 15px 50px rgba(226,160,37,.5);
 }
 
 .tagline{

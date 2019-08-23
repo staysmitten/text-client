@@ -99,10 +99,9 @@ class UserPostForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleUserPost} className="credentialForm">
-        <h1 className="credentialTitle">Join Stay Smitten!</h1>
         <TextField
           id="fullNameInput"
-          label="Full Name"
+          label="full name"
           className="fullNameInput"
           autoComplete="current-fullName"
           margin="normal"
@@ -112,7 +111,7 @@ class UserPostForm extends Component {
         />
           <TextField
             id="phoneNumber"
-            label="Phone Number"
+            label="phone number"
             className="numberInput"
             autoComplete="current-number"
             margin="normal"
@@ -122,7 +121,7 @@ class UserPostForm extends Component {
           />
         <TextField
           id="partnerFullNameInput"
-          label="Partner Full Name"
+          label="partner full name"
           className="partnerFullNameInput"
           autoComplete="current-partnerFullName"
           margin="normal"
@@ -132,7 +131,7 @@ class UserPostForm extends Component {
         />
         <TextField
           id="partnerPhoneNumber"
-          label="Partner Number"
+          label="partner number"
           className="partnerNumberInput"
           autoComplete="current-partnerNumber"
           margin="normal"
@@ -142,7 +141,7 @@ class UserPostForm extends Component {
         />
         <TextField
           id="email"
-          label="Email"
+          label="email"
           className="emailInput"
           autoComplete="current-email"
           margin="normal"
@@ -151,9 +150,9 @@ class UserPostForm extends Component {
           onChange={this.handleInputChange}
         />
         <button className="submitButton" type="submit">
-          Get Stay Smitten Texts
+          JOIN STAY SMITTEN
         </button>
-        
+        <p className="formDetails">Hello! We are currently in beta test mode. If you would like to join Stay Smitten now and be a part of crafting our product into something couples all around the world want and love, please fill out the information below! </p>
       </form>
     );
   }

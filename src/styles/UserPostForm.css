@@ -7,20 +7,33 @@
   background: #fff;
   color: black;
   padding: 2rem;
+  padding-top: 12px;
   border-radius: 0.5rem;
-  text-align: left;
+  text-align: center;
   width: 25rem;
 }
 
+.formDetails{    
+  font-size: 13px;
+  font-weight: 300;
+  color: #777777;
+  width: 92%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
 .submitButton {
-  height: 3rem;    
+  font-family: Poppins;
+  font-size: 20px;
+  height: 3.5rem;
   border-radius: 5px;
-  width: 75%;
+  width: 94%;
   margin-top: 0.5rem;
   align-self: center;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: var(--ss-main);
+  background-color: #0e0e0e;
   color: white;
   border: none;
 }
