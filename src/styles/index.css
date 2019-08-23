@@ -9,6 +9,7 @@
 
 body {
   margin: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -24,4 +25,11 @@ code {
 html{
   height: 100%;
   background-image: url('../assets/img/trinitybackgroundwhite.png');
+}
+
+#root{
+  font-family: Poppins;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 68px 1fr;
 }

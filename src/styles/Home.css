@@ -9,3 +9,31 @@
     text-align: left;
     width: 30rem;
 }
+
+.tagline{
+    align-content: center;
+}
+
+.tagline h2{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.signUpBanner{
+    display: grid;
+    grid-template-columns: 36rem 1fr;
+    background-image: url(../assets/img/stock/couple3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.column1{
+    width: 100%;
+    padding-left: 8rem;
+    padding-top: 4rem;
+}
+
+.column2{
+    width: 100%;    
+}

@@ -1,4 +1,6 @@
 .credentialForm {
+  font-weight: 700;
+  font-size: 27px;
   display: flex;
   flex-flow: column;
   margin: auto;
