@@ -1,6 +1,10 @@
 
 .Admin {
     text-align: center;
+    background-image: url(../assets/img/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .tableHeader{
@@ -24,6 +28,7 @@
   border-radius: 0.5rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
+  box-shadow: 0 15px 50px rgb(27, 27, 27, 0.2);
 }
 
 .tableHeaderWrapper{
@@ -36,6 +41,7 @@
   border-radius: 0.5rem;
   text-align: left;
   width: 23rem;
+  box-shadow: 0 15px 50px rgb(27, 27, 27, 0.2);
 }
 
 .tableWrapper{
