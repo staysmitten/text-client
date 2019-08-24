@@ -1,5 +1,6 @@
 .ThankYou{
   z-index: 0;
+  height: 50rem;
 }
 
 .formWrapper{
@@ -15,10 +16,13 @@
   box-shadow: 0 15px 50px rgb(27, 27, 27, 0.2);
 }
 
-.tagline{
-  align-content: center;    
+.taglineThankYou{
+  align-content: center;
   margin: 0rem auto 4rem auto;
-  width: 30rem;
+  width: 37rem;
+  margin-top: 4rem;
+  font-size: 4rem;
+  color: #2b2b2b;
 }
 
 .tagline h2{
@@ -33,20 +37,23 @@
   display: grid;
   grid-template-columns: 58% 1fr;
   height: 100%;
+  background-image: url(../assets/img/stock/eyeswideopen.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 
 .column1{
   width: 100%;
   padding-top: 2.2rem;
   padding-bottom: 5rem;
-  background-image: url(../assets/img/background3.jpg);
+  /* background-image: url(../assets/img/background3.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .column2{
   width: 100%;   
-  background-image: url(../assets/img/stock/couple3.jpeg);
+  /* background-image: url(../assets/img/stock/couple3.jpeg);
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;  */
 }

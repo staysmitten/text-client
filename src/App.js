@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './assets/img/logo/staySmittenLogo.jpg';
-import footerLogo from './assets/img/logo/StaySmittenCircleBorderLogo.png'
+import logo from './assets/img/logo/staySmittenLogo.png';
+import footerLogo from './assets/img/logo/StaySmittenSmallLogoTransparent.png'
 import './styles/App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Home, Admin, FourOhFour, ThankYou } from './pages';

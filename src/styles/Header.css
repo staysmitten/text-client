@@ -1,9 +1,13 @@
 .headerLogo {
     width: 12rem;
-    margin-top: 3px;
+    height: 53.8px;
+    margin-top: 10px;
+    margin-left: 25px;
 }
 
-.header {
+.header {    
+    display: flex;
+    justify-content: space-between;
     background-color: var(--ss-gray);
     border-top: 8px solid var(--ss-table);
     box-shadow: 0 3px 3px rgba(0,0,0,.1);
@@ -11,3 +15,33 @@
     padding: 10px 20px;
     z-index: 2;
 }
+.socialIcons{
+    text-align: center;
+    margin-top: -5px;
+    margin-right: 25px;
+  }
+  
+  .socialIcons a{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+  }
+  
+  .facebookIcon{
+    background-image: url(../assets/img/icons/facebook.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .instaIcon{
+    background-image: url(../assets/img/icons/instagram.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .twitterIcon{
+    background-image: url(../assets/img/icons/twitter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }

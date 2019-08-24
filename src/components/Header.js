@@ -11,6 +11,11 @@ import '../styles/Header.css';
 const Header = ({ headerLogo}) => (
     <header className="header">
     <img src={headerLogo} className="headerLogo" alt="logo" />
+    <section className="socialIcons">
+      {/* <a className="facebookIcon" href="https://www.facebook.com/"></a> */}
+      <a className="instaIcon" href="https://www.instagram.com/lovestaysmitten/"></a>
+      <a className="twitterIcon" href="https://twitter.com/LoveStaySmitten"></a>
+    </section>
   </header>
 );
 

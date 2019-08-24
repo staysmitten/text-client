@@ -15,19 +15,32 @@
     box-shadow: 0 15px 50px rgb(27, 27, 27, 0.2);
 }
 
-.tagline{
-    align-content: center;    
+.tagline, .taglineBottom{
+    align-content: center;
     margin: 0rem auto 4rem auto;
-    width: 30rem;
-}
+    width: 33rem;
+    margin-top: 4rem;
+    font-size: 4rem;
+    color: #2b2b2b;
+  }
 
-.tagline h2{
+  .taglineBottom{
+    margin-top: 6rem;
+    margin-bottom: 0rem;
+  }
+
+
+.tagline h2, .taglineBottom h2{
     font-family: Poppins;
     font-weight: 700;
     font-size: 27px;
     margin-bottom: 3rem;
     width: 32rem;
     text-align: center;
+}
+
+.taglineBottom h2{
+    width: 34rem;
 }
 
 .signUpBanner{

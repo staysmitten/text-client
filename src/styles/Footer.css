@@ -4,10 +4,10 @@
 
 .footer {
   background-color: var(--ss-gray);
-  height: 22rem;
+  height: 14rem;
   border-bottom: 8px solid var(--ss-table);
   text-align: center;
-  padding: 2rem 20px 0rem 20px;
+  padding: 41px 20px 0rem 20px;
 }
 
 .footerDescription{
@@ -20,35 +20,5 @@
   font-family: Poppins;
   color: #777777;
   margin: 0;
-}
-
-.socialIcons{
-  text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.socialIcons a{
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  margin: 10px;
-}
-
-.facebookIcon{
-  background-image: url(../assets/img/icons/facebook.png);  
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.instaIcon{
-  background-image: url(../assets/img/icons/instagram.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.twitterIcon{
-  background-image: url(../assets/img/icons/twitter.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin-top: -23px;
 }
