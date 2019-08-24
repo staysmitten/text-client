@@ -5,7 +5,6 @@ import { Redirect } from 'react-router';
 // components
 
 import UserPostForm from '../components/UserPostForm';
-import couplePhoto from '../assets/img/stock/couple1.jpeg';
 import '../styles/Home.css';
 
 class Home extends React.Component {
@@ -95,10 +94,15 @@ class Home extends React.Component {
           <section className="signUpBanner">
             <div className="column1">
               <div className='tagline'>
-                <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2>
+                {/* <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2> */}
+                <h2>Couples Receive Daily 2-Part Text Messages, Giving You Both A Shared Moment Of Joy And Surprise In Your Busy Lives.</h2>
               </div>
               <div className="formWrapper">
                 <UserPostForm handleUserPost={this.handleUserPost}/>
+              </div>
+              <div className='taglineBottom'>
+                {/* <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2> */}
+                <h2>From The Producers Of The Bachelor, The Bachelorette, The Amazing Race, Marriage Boot Camp, And Love Is Blind</h2>
               </div>
             </div>
             <div className="column2"/>

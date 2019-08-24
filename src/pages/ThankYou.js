@@ -13,14 +13,7 @@ class ThankYou extends React.Component {
     return ( 
         <div className="ThankYou">
           <section className="thankYouBanner"> 
-            <div className="column1">
-              <div className='tagline'>
-                <h2>Thank you for joining the Stay Smitten family!</h2>
-              </div>
-            </div>
-            <div className="column2">
-            {/* <img className="couplePic" src={couplePhoto} alt='couple'></img> */}
-            </div>
+            <h2 className="taglineThankYou">Welcome To The Stay Smitten Family!</h2>
           </section>
         </div>
     );
