@@ -51,10 +51,11 @@ class PrimeDataTable extends React.Component {
     return (
       <DataTable value={products} paginator={true} paginatorLeft={paginatorLeft} rows={10} rowsPerPageOptions={[5,10,20]} header={header} ref={(el) => { this.dt = el; }} globalFilter={this.state.globalFilter} emptyMessage="No records found">
           <Column field="fullName" header="Full Name" filter={true} sortable={true} />
-          <Column field="number" header="Phone Number" filter={true} sortable={true} />
+          <Column field="number" header="Phone #" filter={true} sortable={true} style={{ width: '10rem' }}/>
           <Column field="partnerFullName" header="Partner Full Name" filter={true} sortable={true} />
-          <Column field="partnerNumber" header="Partner Phone Number" filter={true} sortable={true} />
+          <Column field="partnerNumber" header="Partner Phone #" filter={true} sortable={true} style={{ width: '10rem' }}/>
           <Column field="email" header="Email" filter={true} sortable={true} />
+          <Column field="date" header="Date" filter={true} sortOrder='-1' sortable={true} style={{ width: '8rem' }}/>
       </DataTable>
     );
   }

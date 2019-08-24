@@ -110,7 +110,7 @@ class Admin extends React.Component {
         {this.state.showTable ? (
           <div>
             <div className="tableHeaderWrapper">
-              <p className="tableHeader">Transactions</p>
+              <p className="tableHeader">User Data</p>
             </div>
             <div className="tableBorder">
               <PrimeDataTable loading={this.state.loading} products={this.state.tableData} onRefresh={this.handleRefresh} />
