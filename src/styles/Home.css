@@ -53,3 +53,7 @@
     background-repeat: no-repeat;
     background-size: cover; 
 }
+
+.loader{
+    margin: auto;
+}

@@ -45,31 +45,6 @@ class LoginForm extends Component {
     return (
       <form onSubmit={this.handleLogin} className="credentialForm">
         <h1 className="credentialTitle">Welcome back!</h1>
-        {/* <label className="" htmlFor="loginUsernameInputValue">
-            <input
-              className="credentialInput"
-              type="text"
-              id="loginUsernameInputValue"
-              autoComplete="username"
-              name="loginUsernameInputValue"
-              placeholder="Enter username"
-              value={this.state.loginUsernameInputValue}
-              onChange={this.handleInputChange}
-            />
-        </label> */}
-
-        {/* <label htmlFor="loginPasswordInputValue">
-          <input
-            className="credentialInput"
-            type="password"
-            placeholder="Enter password"
-            id="loginPasswordInputValue"
-            autoComplete="current-password"
-            name="loginPasswordInputValue"
-            value={this.state.loginPasswordInputValue}
-            onChange={this.handleInputChange}
-          />
-        </label> */}
         <div className="usernameWrap">
               <TextField
               id="username-input"
