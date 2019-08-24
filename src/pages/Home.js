@@ -19,6 +19,7 @@ class Home extends React.Component {
         partnerFullName: '',
         partnerNumber: '',
         email: '',
+        date: '',
       },
       redirect: false,
       loading: false,
@@ -34,20 +35,38 @@ class Home extends React.Component {
       partnerFullName: credentials.partnerFullNameInput,
       partnerNumber: credentials.partnerPhoneNumber,
       email: credentials.email,
+      date: this.state.userData.date,
       })
       .then(response => {
         // Sets session token
         console.log(response);
       })
-    .catch(err => alertErrorHandler(err));    
+    .catch(err => alertErrorHandler(err));  
   };
 
   handleUserPost = async(credentials) => {
     this.setState({loading: true});
+    await this.getDate();
     await this.handleAPICalls(credentials);
     this.setState({redirect: true});
   }
 
+  getDate = () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    var hours = String(today.getHours()).padStart(2, '0');
+    var minutes = String(today.getMinutes()).padStart(2, '0');
+    var seconds = String(today.getSeconds()).padStart(2, '0');
+  
+    today = mm + '/' + dd + '/' + yyyy + ' ' + hours + ':' + minutes + ':' + seconds;
+    document.write(today);
+    this.setState({
+      userData: {
+        date: today
+      }});
+  }
 
   render() {
     if (this.state.redirect) {
