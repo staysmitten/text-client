@@ -19,6 +19,7 @@ class Home extends React.Component {
         partnerFullName: '',
         partnerNumber: '',
         email: '',
+        date: '',
       },
       redirect: false,
       loading: false,
@@ -44,6 +45,7 @@ class Home extends React.Component {
 
   handleUserPost = async(credentials) => {
     this.setState({loading: true});
+    await this.getDate();
     await this.handleAPICalls(credentials);
     this.setState({redirect: true});
   }
@@ -59,9 +61,11 @@ class Home extends React.Component {
   
     today = mm + '/' + dd + '/' + yyyy + ' ' + hours + ':' + minutes + ':' + seconds;
     document.write(today);
-    // this.setState({redirect: true});
+    this.setState({
+      userData: {
+        date: today
+      }});
   }
-
 
   render() {
     if (this.state.redirect) {
