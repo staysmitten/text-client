@@ -35,6 +35,7 @@ class Home extends React.Component {
       partnerFullName: credentials.partnerFullNameInput,
       partnerNumber: credentials.partnerPhoneNumber,
       email: credentials.email,
+      date: this.state.userData.date,
       })
       .then(response => {
         // Sets session token
@@ -98,8 +99,7 @@ class Home extends React.Component {
                 <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2>
               </div>
               <div className="formWrapper">
-                {/* <UserPostForm handleUserPost={this.handleUserPost}/> */}
-                <button onClick={this.testDate}/>
+                <UserPostForm handleUserPost={this.handleUserPost}/>
               </div>
             </div>
             <div className="column2"/>
