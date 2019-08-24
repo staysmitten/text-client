@@ -1,0 +1,52 @@
+.ThankYou{
+  z-index: 0;
+}
+
+.formWrapper{
+  display: flex;
+  flex-flow: column;
+  margin: 2rem auto;
+  background: white;
+  color: black;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: left;
+  width: 30rem;
+  box-shadow: 0 15px 50px rgb(27, 27, 27, 0.2);
+}
+
+.tagline{
+  align-content: center;    
+  margin: 0rem auto 4rem auto;
+  width: 30rem;
+}
+
+.tagline h2{
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 27px;
+  margin-bottom: 3rem;
+  width: 32rem;
+}
+
+.thankYouBanner{
+  display: grid;
+  grid-template-columns: 58% 1fr;
+  height: 100%;
+}
+
+.column1{
+  width: 100%;
+  padding-top: 2.2rem;
+  padding-bottom: 5rem;
+  background-image: url(../assets/img/background3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.column2{
+  width: 100%;   
+  background-image: url(../assets/img/stock/couple3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+}

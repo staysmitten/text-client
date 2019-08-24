@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Home.css';
 import API, { alertErrorHandler } from '../services/API';
+import { Redirect } from 'react-router';
 // components
 
 import UserPostForm from '../components/UserPostForm';
@@ -18,6 +19,7 @@ class Home extends React.Component {
         partnerNumber: '',
         email: '',
       },
+      redirect: false,
     };
   }
 
@@ -40,10 +42,14 @@ class Home extends React.Component {
 
   handleUserPost = async(credentials) => {
     await this.handleAPICalls(credentials);
+    this.setState({redirect: true});
   }
 
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect push to="/thankyou" />;
+    }
     return ( 
         <div className="Home">
           <section className="signUpBanner">
