@@ -24,17 +24,6 @@ class App extends React.Component {
           <Route path="/" exact component={Home} />
           <Route path="/tempadmin" exact component={Admin} />
           <Route path="/thankyou" exact component={ThankYou} />
-          {/* <ProtectedRoute
-            path="/secretadmin"
-            isAuthenticated={isAuthenticated}
-            user={user}
-            component={Dashboard}
-            modalDetails={this.state.modalDetails}
-            isModalShowing={this.state.isModalShowing}
-            openModal={this.openModalHandler}
-            closeModal={this.closeModalHandler}
-            logout={this.handleLogout}
-          /> */}
           <Route component={FourOhFour} />
         </Switch>
         <Footer footerLogo={footerLogo}></Footer>
