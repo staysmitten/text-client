@@ -39,13 +39,27 @@ class Home extends React.Component {
         // Sets session token
         console.log(response);
       })
-    .catch(err => alertErrorHandler(err));    
+    .catch(err => alertErrorHandler(err));  
   };
 
   handleUserPost = async(credentials) => {
     this.setState({loading: true});
     await this.handleAPICalls(credentials);
     this.setState({redirect: true});
+  }
+
+  getDate = () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    var hours = String(today.getHours()).padStart(2, '0');
+    var minutes = String(today.getMinutes()).padStart(2, '0');
+    var seconds = String(today.getSeconds()).padStart(2, '0');
+  
+    today = mm + '/' + dd + '/' + yyyy + ' ' + hours + ':' + minutes + ':' + seconds;
+    document.write(today);
+    // this.setState({redirect: true});
   }
 
 
@@ -80,7 +94,8 @@ class Home extends React.Component {
                 <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2>
               </div>
               <div className="formWrapper">
-                <UserPostForm handleUserPost={this.handleUserPost}/>
+                {/* <UserPostForm handleUserPost={this.handleUserPost}/> */}
+                <button onClick={this.testDate}/>
               </div>
             </div>
             <div className="column2"/>
