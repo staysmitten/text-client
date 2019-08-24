@@ -61,7 +61,6 @@ class Home extends React.Component {
     var seconds = String(today.getSeconds()).padStart(2, '0');
   
     today = mm + '/' + dd + '/' + yyyy + ' ' + hours + ':' + minutes + ':' + seconds;
-    document.write(today);
     this.setState({
       userData: {
         date: today
