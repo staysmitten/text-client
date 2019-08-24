@@ -101,6 +101,10 @@ class Home extends React.Component {
               <div className="formWrapper">
                 <UserPostForm handleUserPost={this.handleUserPost}/>
               </div>
+              <div className='tagline'>
+                {/* <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2> */}
+                <h2>From The Producers Of The Bachelor, The Bachelorette, The Amazing Race, Marriage Boot Camp, And Love Is Blind</h2>
+              </div>
             </div>
             <div className="column2"/>
           </section>

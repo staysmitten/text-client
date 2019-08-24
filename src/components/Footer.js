@@ -17,7 +17,6 @@ const Footer = ({ footerLogo}) => (
       <a className="twitterIcon" href="https://twitter.com/LoveStaySmitten"></a>
     </section>
     <p className="footerSS"> ©2019 Stay Smitten</p>
-    <p className="footerDescription">"From the producers of The Bachelor, The Bachelorette, The Amazing Race, Marriage Boot Camp, and Love is Blind"</p>
   </footer>
 );
 

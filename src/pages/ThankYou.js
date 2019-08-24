@@ -15,7 +15,7 @@ class ThankYou extends React.Component {
           <section className="thankYouBanner"> 
             <div className="column1">
               <div className='tagline'>
-                <h2>Thank you for joining the Stay Smitten family!</h2>
+                <h2>Welcome To The Stay Smitten Family!</h2>
               </div>
             </div>
             <div className="column2">
