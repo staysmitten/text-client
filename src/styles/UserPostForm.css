@@ -143,6 +143,12 @@
   grid-template-columns: 1fr 1fr;
 }
 
+/* @media all and (max-width: 1075px) {
+  .credentialForm{
+    width: 20rem;
+  }
+} */
+
 @media all and (max-width: 709px) {
   .loginPage {
     flex-direction: column;
@@ -162,8 +168,19 @@
 
 @media all and (max-width: 610px) {
   .credentialForm {
-    width: 75%;
+    width: 95%;
   }
-  
+}
+
+@media all and (max-width: 375px) {
+  .submitButton {
+    font-size: 15px;
+  }
+  .credentialForm label{
+    font-size: 13px;
+  }
+  .formDetails{
+    font-size: 9px;
+  }
 }
 

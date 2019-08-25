@@ -45,10 +45,7 @@
 
 .signUpBanner{
     display: grid;
-    grid-template-columns: 58% 1fr;
-    /* background-image: url(../assets/img/stock/couple3.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover; */
+    grid-template-columns: 45% 1fr;
 }
 
 .column1{
@@ -66,6 +63,83 @@
     background-image: url(../assets/img/stock/couple3.jpeg);
     background-repeat: no-repeat;
     background-size: cover; 
+}
+
+@media all and (max-width: 1370px) {
+    .signUpBanner{
+        grid-template-columns: 50% 1fr;
+    }
+    .column2{
+        background-position: -3rem;
+    }
+}
+
+@media all and (max-width: 1230px) {
+    .tagline, .tagline h2, .taglineBottom, .taglineBottom h2{
+        width: 27rem;
+    }
+    .tagline{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .tagline h2, .taglineBottom h2{
+        margin-bottom: 0rem;
+        font-size: 24px;
+    }
+    .taglineBottom{
+        margin-top: 3rem;
+    }
+}
+
+@media all and (max-width: 1075px) {
+    .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
+        width: 37rem;
+    }
+    .signUpBanner {
+        grid-template-columns: none;
+        grid-template-rows: 1fr; 
+        background-image: url(../assets/img/stock/couple3.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+    .column1{
+        background-image: none;
+        background-color: #0000006e;
+    }
+    .tagline, .taglineBottom{
+        color: white;
+    }
+}
+
+@media all and (max-width: 610px) {
+    .formWrapper {
+      width: 24rem;
+    }
+    .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
+        width: 30rem;
+    }
+    .tagline h2, .taglineBottom h2 {
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 450px){
+    .formWrapper {
+        width: 80%;
+    }
+    .tagline h2, .taglineBottom h2 {
+        font-size: 15px;
+    }
+    .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .loader{

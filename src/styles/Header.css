@@ -1,10 +1,3 @@
-.headerLogo {
-    width: 12rem;
-    height: 53.8px;
-    margin-top: 10px;
-    margin-left: 25px;
-}
-
 .header {    
     display: flex;
     justify-content: space-between;
@@ -15,33 +8,62 @@
     padding: 10px 20px;
     z-index: 2;
 }
+
+.headerLogo {
+    width: 12rem;
+    height: 53.8px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
 .socialIcons{
-    text-align: center;
-    margin-top: -5px;
-    margin-right: 25px;
+  text-align: center;
+  margin-top: -5px;
+  margin-right: 25px;
+}
+
+.socialIcons a{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+
+.facebookIcon{
+  background-image: url(../assets/img/icons/facebook.png);  
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.instaIcon{
+  background-image: url(../assets/img/icons/instagram.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.twitterIcon{
+  background-image: url(../assets/img/icons/twitter.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media all and (max-width: 500px) {
+  .headerLogo {
+    margin-left: 0;
   }
-  
+  .socialIcons{
+    margin-right: 0;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .socialIcons{
+    margin-right: -10px;
+    margin-top: 15px;
+  }
   .socialIcons a{
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 10px;
+    height: 40px;
+    width: 40px;
+    margin: 3px;
   }
-  
-  .facebookIcon{
-    background-image: url(../assets/img/icons/facebook.png);  
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .instaIcon{
-    background-image: url(../assets/img/icons/instagram.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .twitterIcon{
-    background-image: url(../assets/img/icons/twitter.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+}

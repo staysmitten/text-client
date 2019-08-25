@@ -3,19 +3,6 @@
   height: 50rem;
 }
 
-.formWrapper{
-  display: flex;
-  flex-flow: column;
-  margin: 2rem auto;
-  background: white;
-  color: black;
-  padding: 2rem;
-  border-radius: 20px;
-  text-align: left;
-  width: 30rem;
-  box-shadow: 0 15px 50px rgb(27, 27, 27, 0.2);
-}
-
 .taglineThankYou{
   align-content: center;
   margin: 0rem auto 4rem auto;
@@ -25,7 +12,7 @@
   color: #2b2b2b;
 }
 
-.tagline h2{
+.taglineThankYou h2{
   font-family: Poppins;
   font-weight: 700;
   font-size: 27px;
@@ -56,4 +43,49 @@
   /* background-image: url(../assets/img/stock/couple3.jpeg);
   background-repeat: no-repeat;
   background-size: cover;  */
+}
+
+
+@media all and (max-width: 1230px) {
+  .taglineThankYou{
+    font-size: 3rem;
+    margin-left: 4rem;
+  }
+}
+
+@media all and (max-width: 1085px) {
+  .thankYouBanner{
+    background-position: -7rem;
+  }
+}
+
+@media all and (max-width: 972px) {
+  .thankYouBanner{
+    background-position: -17rem;
+  }
+  .taglineThankYou{
+    font-size: 40px;
+  }
+}
+
+@media all and (max-width: 810px) {
+  .thankYouBanner{
+    background-position: -22rem;
+  }
+  .taglineThankYou{
+    font-size: 36px;
+    width: 25rem;
+  }
+}
+
+@media all and (max-width: 733px) {
+  .ThankYou{
+    height: 42rem;
+  }
+  .thankYouBanner{
+    background-position: -16rem;
+  }
+  .taglineThankYou{
+    font-size: 30px;
+  }
 }
