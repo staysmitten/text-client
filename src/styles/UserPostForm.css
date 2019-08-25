@@ -143,11 +143,11 @@
   grid-template-columns: 1fr 1fr;
 }
 
-@media all and (max-width: 1075px) {
+/* @media all and (max-width: 1075px) {
   .credentialForm{
     width: 20rem;
   }
-}
+} */
 
 @media all and (max-width: 709px) {
   .loginPage {
