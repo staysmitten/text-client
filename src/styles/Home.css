@@ -45,10 +45,7 @@
 
 .signUpBanner{
     display: grid;
-    grid-template-columns: 58% 1fr;
-    /* background-image: url(../assets/img/stock/couple3.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover; */
+    grid-template-columns: 45% 1fr;
 }
 
 .column1{
