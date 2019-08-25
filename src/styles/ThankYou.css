@@ -77,3 +77,15 @@
     width: 25rem;
   }
 }
+
+@media all and (max-width: 733px) {
+  .ThankYou{
+    height: 42rem;
+  }
+  .thankYouBanner{
+    background-position: -16rem;
+  }
+  .taglineThankYou{
+    font-size: 30px;
+  }
+}
