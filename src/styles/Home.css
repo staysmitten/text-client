@@ -65,6 +65,33 @@
     background-size: cover; 
 }
 
+@media all and (max-width: 1370px) {
+    .signUpBanner{
+        grid-template-columns: 50% 1fr;
+    }
+    .column2{
+        background-position: -3rem;
+    }
+}
+
+@media all and (max-width: 1230px) {
+    .tagline, .tagline h2, .taglineBottom, .taglineBottom h2{
+        width: 27rem;
+    }
+    .tagline{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .tagline h2, .taglineBottom h2{
+        margin-bottom: 0rem;
+        font-size: 24px;
+    }
+    .taglineBottom{
+        margin-top: 3rem;
+    }
+}
+
+
 .loader{
     margin: auto;
 }
