@@ -172,3 +172,15 @@
   }
 }
 
+@media all and (max-width: 375px) {
+  .submitButton {
+    font-size: 15px;
+  }
+  .credentialForm label{
+    font-size: 13px;
+  }
+  .formDetails{
+    font-size: 9px;
+  }
+}
+
