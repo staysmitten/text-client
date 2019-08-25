@@ -129,6 +129,19 @@
     }
 }
 
+@media (max-width: 450px){
+    .formWrapper {
+        width: 80%;
+    }
+    .tagline h2, .taglineBottom h2 {
+        font-size: 15px;
+    }
+    .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 .loader{
     margin: auto;
 }
