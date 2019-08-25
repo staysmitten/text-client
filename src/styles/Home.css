@@ -100,6 +100,22 @@
     }
 }
 
+@media all and (max-width: 1075px) {
+    .signUpBanner {
+        grid-template-columns: none;
+        grid-template-rows: 1fr; 
+        background-image: url(../assets/img/stock/couple3.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+    .column1{
+        background-image: none;
+        background-color: #0000006e;
+    }
+    .tagline, .taglineBottom{
+        color: white;
+    }
+}
 
 .loader{
     margin: auto;
