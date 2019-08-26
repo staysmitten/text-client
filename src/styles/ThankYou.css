@@ -89,3 +89,9 @@
     font-size: 30px;
   }
 }
+
+@media all and (max-width: 655px) {
+  .thankYouBanner{
+    background-position: -19rem;
+  }
+}

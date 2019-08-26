@@ -91,23 +91,26 @@
     }
 }
 
+/* Change from side banner to banner below */
 @media all and (max-width: 1075px) {
     .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
         width: 37rem;
     }
     .signUpBanner {
         grid-template-columns: none;
-        grid-template-rows: 1fr; 
-        background-image: url(../assets/img/stock/couple3.jpeg);
-        background-repeat: no-repeat;
-        background-size: cover; 
+        grid-template-rows: 1fr 47rem; 
     }
-    .column1{
-        background-image: none;
-        background-color: #0000006e;
+    .column2{
+        background-position: 0rem -9rem;
     }
     .tagline, .taglineBottom{
         color: white;
+    }
+}
+
+@media all and (max-width: 950px) {
+    .column2{
+        background-position: 0rem -7rem;
     }
 }
 
