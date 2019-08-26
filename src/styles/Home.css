@@ -114,6 +114,16 @@
     }
 }
 
+@media all and (max-width: 720px) {
+    .column2{
+        background-position: 0rem -4rem;
+    }
+    .signUpBanner {
+        grid-template-rows: 1fr 42rem;
+    }
+}
+
+
 @media all and (max-width: 610px) {
     .formWrapper {
       width: 24rem;
@@ -123,6 +133,12 @@
     }
     .tagline h2, .taglineBottom h2 {
         font-size: 20px;
+    }
+}
+
+@media all and (max-width: 580px) {
+    .signUpBanner {
+        grid-template-rows: 1fr 32rem;
     }
 }
 
