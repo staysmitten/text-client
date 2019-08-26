@@ -152,7 +152,7 @@ class UserPostForm extends Component {
         <button className="submitButton" type="submit">
           JOIN STAY SMITTEN
         </button>
-        <p className="formDetails">Hello! We are currently in beta test mode. If you would like to join Stay Smitten now and be a part of crafting our product into something couples all around the world want and love, please fill out the information below! </p>
+        <p className="formDetails">Hello! We are currently in beta test mode. If you would like to join Stay Smitten now and be a part of crafting our product into something couples all around the world want and love, please fill out the information above! </p>
       </form>
     );
   }
