@@ -176,6 +176,24 @@
     }
 }
 
+@media all and (max-width: 350px) {
+    .column2{
+        background-position: 0rem -2rem;
+    }
+    .signUpBanner {
+        grid-template-rows: 1fr 22rem;
+    }
+}
+
+@media all and (max-width: 311px) {
+    .column2{
+        background-position: 0rem -2rem;
+    }
+    .signUpBanner {
+        grid-template-rows: 1fr 20rem;
+    }
+}
+
 .loader{
     margin: auto;
 }
