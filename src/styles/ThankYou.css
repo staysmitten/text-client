@@ -157,3 +157,15 @@
     padding-right: 3rem;
   }
 }
+
+@media all and (max-width: 340px) { 
+  .thankYouBanner {
+    grid-template-rows: 10rem 1fr;
+  }
+  .responsiveThankYou{
+    background-position: -9rem;
+  }
+  .taglineThankYou {
+    padding-top: 3rem;
+  }
+}
