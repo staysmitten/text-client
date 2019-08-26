@@ -100,5 +100,24 @@
   .taglineThankYou {
     font-size: 25px;
     width: 18rem;
+    margin-left: 2rem;
+  }
 }
+
+@media all and (max-width: 590px) {
+  .thankYouBanner{
+    background-position: -16rem;
+  }
+}
+
+@media all and (max-width: 527px) {
+  .ThankYou {
+    height: 33rem;
+  }
+  .thankYouBanner{
+    background-position: -15rem;
+  }
+  .taglineThankYou {
+    font-size: 22px;
+  }
 }
