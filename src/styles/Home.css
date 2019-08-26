@@ -167,6 +167,15 @@
     }
 }
 
+@media all and (max-width: 420px) {
+    .column2{
+        background-position: 0rem -3rem;
+    }
+    .signUpBanner {
+        grid-template-rows: 1fr 24rem;
+    }
+}
+
 .loader{
     margin: auto;
 }
