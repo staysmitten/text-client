@@ -23,6 +23,7 @@
 .thankYouBanner{
   display: grid;
   height: 100%;
+  grid-template-columns: 58% 1fr;
   background-image: url(../assets/img/stock/eyeswideopen.jpeg);
   background-repeat: no-repeat;
   background-size: cover; 
@@ -110,6 +111,7 @@
   }
   .thankYouBanner{
     background-position: -15rem;
+    grid-template-columns: none;
     grid-template-rows: 8rem 28rem;
     background-image: none;
   }

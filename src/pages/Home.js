@@ -80,7 +80,7 @@ class Home extends React.Component {
               <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2>
             </div>
             <div className="formWrapper">
-              <Loader className='loader' type="Hearts" color="#ce3e83" height={300} width={300} />
+              <Loader className='loader' type="Hearts" color="#ce3e83" height={250} width={250} />
             </div>
           </div>
           <div className="column2">
