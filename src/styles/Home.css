@@ -103,9 +103,6 @@
     .column2{
         background-position: 0rem -9rem;
     }
-    .tagline, .taglineBottom{
-        color: white;
-    }
 }
 
 @media all and (max-width: 950px) {
