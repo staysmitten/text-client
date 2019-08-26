@@ -91,25 +91,38 @@
     }
 }
 
+/* Change from side banner to banner below */
 @media all and (max-width: 1075px) {
     .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
         width: 37rem;
     }
     .signUpBanner {
         grid-template-columns: none;
-        grid-template-rows: 1fr; 
-        background-image: url(../assets/img/stock/couple3.jpeg);
-        background-repeat: no-repeat;
-        background-size: cover; 
+        grid-template-rows: 1fr 47rem; 
     }
-    .column1{
-        background-image: none;
-        background-color: #0000006e;
+    .column2{
+        background-position: 0rem -9rem;
     }
     .tagline, .taglineBottom{
         color: white;
     }
 }
+
+@media all and (max-width: 950px) {
+    .column2{
+        background-position: 0rem -7rem;
+    }
+}
+
+@media all and (max-width: 720px) {
+    .column2{
+        background-position: 0rem -4rem;
+    }
+    .signUpBanner {
+        grid-template-rows: 1fr 42rem;
+    }
+}
+
 
 @media all and (max-width: 610px) {
     .formWrapper {
@@ -123,9 +136,21 @@
     }
 }
 
+@media all and (max-width: 580px) {
+    .signUpBanner {
+        grid-template-rows: 1fr 32rem;
+    }
+}
+
 @media all and (max-width: 500px) {
     .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
         width: 25rem;
+    }
+}
+
+@media all and (max-width: 460px) {
+    .signUpBanner {
+        grid-template-rows: 1fr 27rem;
     }
 }
 
@@ -139,6 +164,30 @@
     .tagline, .tagline h2, .taglineBottom, .taglineBottom h2 {
         width: 90%;
         margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .column2{
+        background-position: 0rem -3rem;
+    }
+    .signUpBanner {
+        grid-template-rows: 1fr 24rem;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .column2{
+        background-position: 0rem -2rem;
+    }
+    .signUpBanner {
+        grid-template-rows: 1fr 22rem;
+    }
+}
+
+@media all and (max-width: 311px) {
+    .signUpBanner {
+        grid-template-rows: 1fr 20rem;
     }
 }
 

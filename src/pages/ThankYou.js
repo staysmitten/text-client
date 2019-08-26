@@ -14,6 +14,7 @@ class ThankYou extends React.Component {
         <div className="ThankYou">
           <section className="thankYouBanner"> 
             <h2 className="taglineThankYou">Welcome To The Stay Smitten Family!</h2>
+            <section className="responsiveThankYou"></section>
           </section>
         </div>
     );
