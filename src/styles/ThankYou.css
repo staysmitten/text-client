@@ -110,7 +110,7 @@
   }
   .thankYouBanner{
     background-position: -15rem;
-    grid-template-rows: 9rem 28rem;
+    grid-template-rows: 8rem 28rem;
     background-image: none;
   }
   .responsiveThankYou{
@@ -124,11 +124,30 @@
   .taglineThankYou {
     width: 100%;
     margin: 0;
-    padding-top: 3.5rem;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 5rem;
     text-align: center;
     font-size: 22px;
     background-image: url(../assets/img/background3.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
+  }
+}
+
+@media all and (max-width: 432px) {
+  .ThankYou{
+    height: 31rem;
+  }
+  .thankYouBanner{
+    grid-template-rows: 8rem 1fr;
+  }
+  .responsiveThankYou{
+    background-position: -8rem;
+  }
+  .taglineThankYou {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 5rem;
   }
 }
