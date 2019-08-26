@@ -148,6 +148,12 @@
     }
 }
 
+@media all and (max-width: 460px) {
+    .signUpBanner {
+        grid-template-rows: 1fr 27rem;
+    }
+}
+
 @media (max-width: 450px){
     .formWrapper {
         width: 80%;
