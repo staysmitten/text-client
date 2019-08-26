@@ -22,29 +22,11 @@
 
 .thankYouBanner{
   display: grid;
-  grid-template-columns: 58% 1fr;
   height: 100%;
   background-image: url(../assets/img/stock/eyeswideopen.jpeg);
   background-repeat: no-repeat;
   background-size: cover; 
 }
-
-.column1{
-  width: 100%;
-  padding-top: 2.2rem;
-  padding-bottom: 5rem;
-  /* background-image: url(../assets/img/background3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
-}
-
-.column2{
-  width: 100%;   
-  /* background-image: url(../assets/img/stock/couple3.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;  */
-}
-
 
 @media all and (max-width: 1230px) {
   .taglineThankYou{
@@ -119,5 +101,34 @@
   }
   .taglineThankYou {
     font-size: 22px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .ThankYou {
+    height: 33rem;
+  }
+  .thankYouBanner{
+    background-position: -15rem;
+    grid-template-rows: 9rem 28rem;
+    background-image: none;
+  }
+  .responsiveThankYou{
+    display: grid;
+    height: 100%;
+    background-image: url(../assets/img/stock/eyeswideopen.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: -11rem;
+  }
+  .taglineThankYou {
+    width: 100%;
+    margin: 0;
+    padding-top: 3.5rem;
+    text-align: center;
+    font-size: 22px;
+    background-image: url(../assets/img/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
   }
 }
