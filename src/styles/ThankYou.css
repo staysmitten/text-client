@@ -90,8 +90,15 @@
   }
 }
 
-@media all and (max-width: 655px) {
-  .thankYouBanner{
-    background-position: -19rem;
+@media all and (max-width: 670px) {
+  .ThankYou {
+    height: 36rem;
   }
+  .thankYouBanner{
+    background-position: -12rem;
+  }
+  .taglineThankYou {
+    font-size: 25px;
+    width: 18rem;
+}
 }
