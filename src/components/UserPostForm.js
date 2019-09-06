@@ -101,7 +101,7 @@ class UserPostForm extends Component {
       <form onSubmit={this.handleUserPost} className="credentialForm">
         <TextField
           id="fullNameInput"
-          label="full name"
+          label="What's your full name?"
           className="fullNameInput"
           autoComplete="current-fullName"
           margin="normal"
@@ -111,7 +111,7 @@ class UserPostForm extends Component {
         />
           <TextField
             id="phoneNumber"
-            label="phone number"
+            label="What's your cell number?"
             className="numberInput"
             autoComplete="current-number"
             margin="normal"
@@ -121,7 +121,7 @@ class UserPostForm extends Component {
           />
         <TextField
           id="partnerFullNameInput"
-          label="partner full name"
+          label="Your honey's full name"
           className="partnerFullNameInput"
           autoComplete="current-partnerFullName"
           margin="normal"
@@ -131,7 +131,7 @@ class UserPostForm extends Component {
         />
         <TextField
           id="partnerPhoneNumber"
-          label="partner number"
+          label="Their cell number"
           className="partnerNumberInput"
           autoComplete="current-partnerNumber"
           margin="normal"
@@ -141,18 +141,19 @@ class UserPostForm extends Component {
         />
         <TextField
           id="email"
-          label="email"
+          label="What's your email?"
           className="emailInput"
           autoComplete="current-email"
           margin="normal"
           variant="outlined"
           value={this.state.email}
           onChange={this.handleInputChange}
-        />
+        /> 
         <button className="submitButton" type="submit">
           JOIN STAY SMITTEN
         </button>
-        <p className="formDetails">Hello! We are currently in beta test mode. If you would like to join Stay Smitten now and be a part of crafting our product into something couples all around the world want and love, please fill out the information above! </p>
+        <p className="formDetails">Once We Launch, Couples Will Receive Daily 2-Part Text Messages, Giving You Both A Shared Moment Of Joy And Surprise In Your Busy Lives.</p>
+        <p className="formDetails">We are currently in beta test mode. If you would like to join Stay Smitten now and be a part of crafting our product into something couples all around the world want and love, please fill out the information above! </p>
       </form>
     );
   }
