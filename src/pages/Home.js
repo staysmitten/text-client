@@ -95,7 +95,9 @@ class Home extends React.Component {
             <div className="column1">
               <div className='tagline'>
                 {/* <h2>Giving you both a shared moment of joy and surprise in your busy lives!</h2> */}
-                <h2>Couples Receive Daily 2-Part Text Messages, Giving You Both A Shared Moment Of Joy And Surprise In Your Busy Lives.</h2>
+                <h2 className="large">Add Extra Spark To Your Relationship Everyday.</h2>
+                <h2 className="medium">Join Our Waitlist Today.</h2>
+                {/* <h2 className="small">Once We Launch, Couples Will Receive Daily 2-Part Text Messages, Giving You Both A Shared Moment Of Joy And Surprise In Your Busy Lives.</h2> */}
               </div>
               <div className="formWrapper">
                 <UserPostForm handleUserPost={this.handleUserPost}/>
