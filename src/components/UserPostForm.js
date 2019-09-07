@@ -1,9 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Swal from 'sweetalert2';
 import '../styles/UserPostForm.css';
+
+const CssTextField = withStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: '#C297FF',
+    },
+    '& .MuiOutlinedInput-root': {
+      '&:hover fieldset': {
+        borderColor: '#C297FF',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#C297FF',
+      },
+    },
+  },
+})(TextField);
 
 class UserPostForm extends Component {
   constructor(props) {
@@ -138,7 +155,7 @@ class UserPostForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleUserPost} className="credentialForm">
-        <TextField
+        <CssTextField
           id="fullNameInput"
           label="What's your full name?"
           className="fullNameInput"
@@ -148,7 +165,7 @@ class UserPostForm extends Component {
           value={this.state.fullNameInput}
           onChange={this.handleInputChange}
         />
-        <TextField
+        <CssTextField
           id="phoneNumber"
           label="What's your cell number?"
           className="numberInput"
@@ -158,7 +175,7 @@ class UserPostForm extends Component {
           value={this.state.phoneNumber}
           onChange={this.handleInputChange}
         />
-        <TextField
+        <CssTextField
           id="partnerFullNameInput"
           label="Your honey's full name"
           className="partnerFullNameInput"
@@ -168,7 +185,7 @@ class UserPostForm extends Component {
           value={this.state.partnerFullNameInput}
           onChange={this.handleInputChange}
         />
-        <TextField
+        <CssTextField
           id="partnerPhoneNumber"
           label="Their cell number"
           className="partnerNumberInput"
@@ -178,7 +195,7 @@ class UserPostForm extends Component {
           value={this.state.partnerPhoneNumber}
           onChange={this.handleInputChange}
         />
-        <TextField
+        <CssTextField
           id="email"
           label="What's your email?"
           className="emailInput"
@@ -188,7 +205,7 @@ class UserPostForm extends Component {
           value={this.state.email}
           onChange={this.handleInputChange}
         />     
-        <TextField
+        <CssTextField
           id="status"
           select
           label="Relationship Status"
@@ -208,7 +225,7 @@ class UserPostForm extends Component {
               {option.label}
             </MenuItem>
           ))}
-        </TextField> 
+        </CssTextField> 
         <button className="submitButton" type="submit">
           JOIN STAY SMITTEN
         </button>
