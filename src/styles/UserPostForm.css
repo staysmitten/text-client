@@ -15,6 +15,7 @@
 
 .credentialForm div{
   width: 100%;
+  background-color: #ffffff;
 }
 
 .formDetails{    
@@ -67,6 +68,13 @@
   border-radius: 5px;
   padding-left: 0.7rem;
   background-color: #ffffff;
+}
+
+.credentialForm .statusInput{
+  margin-bottom: 0.7rem;
+  border-radius: 5px;
+  background-color: #ffffff;
+  background: #ffffff;
 }
 
 .usernameIcon{
