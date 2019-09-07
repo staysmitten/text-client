@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
 import Swal from 'sweetalert2';
 import '../styles/UserPostForm.css';
+
+const CssTextField = withStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: '#C297FF',
+    },
+    '& .MuiOutlinedInput-root': {
+      '&:hover fieldset': {
+        borderColor: '#C297FF',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#C297FF',
+      },
+    },
+  },
+})(TextField);
 
 class UserPostForm extends Component {
   constructor(props) {
@@ -14,6 +32,25 @@ class UserPostForm extends Component {
       partnerFullNameInput: '',
       partnerPhoneNumber: '',
       email: '',
+      status: 'Dating',
+      currencies: [
+        {
+          value: 'Dating',
+          label: 'Dating',
+        },
+        {
+          value: 'Dating&Living',
+          label: 'Dating & Living Together',
+        },
+        {
+          value: 'Married',
+          label: 'Married',
+        },
+        {
+          value: 'Married&Kids',
+          label: 'Married With Kid(s)',
+        },
+      ],
     };
   }
 
@@ -31,6 +68,23 @@ class UserPostForm extends Component {
     this.setState({ [name]: value });
   };
 
+
+    /**
+   * Select input change handler for status.
+   *
+   * `NOTE:` Requires some alteration for radio buttons and drop down selects.
+   * @param {Event} event Input change event
+   */
+  handleInputStatusChange = event => {
+    event.persist()
+    const value = event.target.value;
+    const name = 'status';
+
+    this.setState({ [name]: value });
+  };
+
+
+
     /**
    * Handle form input changes
    * @param {Event} event Submit event
@@ -43,6 +97,7 @@ class UserPostForm extends Component {
       partnerFullNameInput,
       partnerPhoneNumber,
       email,
+      status,
     } = this.state;
     // Regex
     const emailCheck = /\S+@\S+\.\S+/;
@@ -92,6 +147,7 @@ class UserPostForm extends Component {
         partnerFullNameInput: document.getElementById('partnerFullNameInput').value,
         partnerPhoneNumber: document.getElementById('partnerPhoneNumber').value,
         email: document.getElementById('email').value,
+        status: document.getElementById('status').value,
       });
     }
   };
@@ -99,7 +155,7 @@ class UserPostForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleUserPost} className="credentialForm">
-        <TextField
+        <CssTextField
           id="fullNameInput"
           label="What's your full name?"
           className="fullNameInput"
@@ -109,17 +165,17 @@ class UserPostForm extends Component {
           value={this.state.fullNameInput}
           onChange={this.handleInputChange}
         />
-          <TextField
-            id="phoneNumber"
-            label="What's your cell number?"
-            className="numberInput"
-            autoComplete="current-number"
-            margin="normal"
-            variant="outlined"
-            value={this.state.phoneNumber}
-            onChange={this.handleInputChange}
-          />
-        <TextField
+        <CssTextField
+          id="phoneNumber"
+          label="What's your cell number?"
+          className="numberInput"
+          autoComplete="current-number"
+          margin="normal"
+          variant="outlined"
+          value={this.state.phoneNumber}
+          onChange={this.handleInputChange}
+        />
+        <CssTextField
           id="partnerFullNameInput"
           label="Your honey's full name"
           className="partnerFullNameInput"
@@ -129,7 +185,7 @@ class UserPostForm extends Component {
           value={this.state.partnerFullNameInput}
           onChange={this.handleInputChange}
         />
-        <TextField
+        <CssTextField
           id="partnerPhoneNumber"
           label="Their cell number"
           className="partnerNumberInput"
@@ -139,7 +195,7 @@ class UserPostForm extends Component {
           value={this.state.partnerPhoneNumber}
           onChange={this.handleInputChange}
         />
-        <TextField
+        <CssTextField
           id="email"
           label="What's your email?"
           className="emailInput"
@@ -148,7 +204,28 @@ class UserPostForm extends Component {
           variant="outlined"
           value={this.state.email}
           onChange={this.handleInputChange}
-        /> 
+        />     
+        <CssTextField
+          id="status"
+          select
+          label="Relationship Status"
+          className="statusInput"
+          value={this.state.status}
+          onChange={this.handleInputStatusChange}
+          SelectProps={{
+            MenuProps: {
+              className: 'statusMenu',
+            },
+          }}
+          margin="normal"
+          variant="outlined"
+        >
+          {this.state.currencies.map(option => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </CssTextField> 
         <button className="submitButton" type="submit">
           JOIN STAY SMITTEN
         </button>
