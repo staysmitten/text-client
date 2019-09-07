@@ -19,6 +19,7 @@ class Home extends React.Component {
         partnerNumber: '',
         email: '',
         date: '',
+        status: '',
       },
       redirect: false,
       loading: false,
@@ -34,6 +35,7 @@ class Home extends React.Component {
       partnerFullName: credentials.partnerFullNameInput,
       partnerNumber: credentials.partnerPhoneNumber,
       email: credentials.email,
+      status: credentials.status,
       date: this.state.userData.date,
       })
       .then(response => {
