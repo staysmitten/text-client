@@ -55,6 +55,7 @@ class PrimeDataTable extends React.Component {
           <Column field="partnerFullName" header="Partner Full Name" filter={true} sortable={true} />
           <Column field="partnerNumber" header="Partner Phone #" filter={true} sortable={true} style={{ width: '10rem' }}/>
           <Column field="email" header="Email" filter={true} sortable={true} />
+          <Column field="status" header="Status" filter={true} sortable={true} />
           <Column field="date" header="Date" filter={true} sortOrder='-1' sortable={true} style={{ width: '8rem' }}/>
       </DataTable>
     );
