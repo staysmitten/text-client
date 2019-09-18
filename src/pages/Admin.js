@@ -62,7 +62,7 @@ class Admin extends React.Component {
   handlePopulateData = async() => {
     if (this.state.loggedIn) {
         // Table Data Get Request
-        await API.get('/api/user/admin', {
+        await API.get('/api/user/', {
           headers: {
             'Authorization': this.state.sessionToken,
           }
