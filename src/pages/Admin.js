@@ -26,15 +26,28 @@ class Admin extends React.Component {
   handleAPICalls = async credentials => {
     // Login Request
     // TODO: Handle Login On Backend
-    // await API.post('login/', {
-    //     username: credentials.username,
-    //     password: credentials.password,
-    //   },
-    //   {
-    //     headers: {
-    //       'X-Appery-Database-Id': this.state.databaseId,
-    //     }
-    // })
+    await API.post('/api/auth/login/', {
+        username: credentials.username,
+        password: credentials.password,
+      },
+      {
+        headers: {
+          'X-Appery-Database-Id': this.state.databaseId,
+        }
+    })
+    .then(response => {
+      // Sets session token
+      this.setState({ 
+        sessionToken: response.data.token,
+        loading: true,
+        loggedIn: true,
+        showTable: true,
+      });  
+    })
+    .catch(err => alertErrorHandler(err));
+
+    // // MOCK Login
+    //   await API.get('/', {})
     // .then(response => {
     //   // Sets session token
     //   this.setState({ 
@@ -43,35 +56,24 @@ class Admin extends React.Component {
     //     loggedIn: true,
     //     showTable: true,
     //   });  
-    // })
-    // .catch(err => alertErrorHandler(err));
-
-    // MOCK Login
-      await API.get('/', {})
-    .then(response => {
-      // Sets session token
-      this.setState({ 
-        sessionToken: response.data.sessionToken,
-        loading: true,
-        loggedIn: true,
-        showTable: true,
-      });  
-    });
+    // });
   };
 
   handlePopulateData = async() => {
-      console.log(this.loading);
     if (this.state.loggedIn) {
         // Table Data Get Request
-        await API.get(`/api/user/`, {
-        })
+        await API.get('/api/user/', {
+          headers: {
+            'Authorization': this.state.sessionToken,
+          }
+      })
         .then(response => {
           this.setState({ 
             tableData: response.data,
           });  
         })
         .catch(err => alertErrorHandler(err));
-    }  
+    }
     this.setState({ 
       loading: false,
     });  
