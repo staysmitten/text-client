@@ -22,7 +22,7 @@ class App extends React.Component {
         <Header headerLogo={logo} />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/tempadmin" exact component={Admin} />
+          <Route path="/admin" exact component={Admin} />
           <Route path="/thankyou" exact component={ThankYou} />
           <Route component={FourOhFour} />
         </Switch>
