@@ -10,7 +10,9 @@ import '../styles/Footer.css';
  */
 const Footer = ({ footerLogo}) => (
   <footer className="footer">
-    <img src={footerLogo} className="footerLogo" alt="logo" />
+    <a href="https://staysmitten.com/">
+      <img src={footerLogo} className="footerLogo" alt="logo" />
+    </a>
     <p className="footerSS"> ©2019 Stay Smitten</p>
   </footer>
 );
