@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/404.css'
 
 /**
  * Missing page - Someone went to the wrong location (404 error)
@@ -9,8 +10,6 @@ import PropTypes from 'prop-types';
  */
 const FourOhFour = ({ location: { pathname: pathName } }) => (
   <main className="fourOhFourMain">
-    <h1 className="fourOhFourHeading">404 Error</h1>
-    <h2 className="fourOhFourSubheading">Page Not Found</h2>
   </main>
 );
 
