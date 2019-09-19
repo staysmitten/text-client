@@ -10,7 +10,9 @@ import '../styles/Header.css';
  */
 const Header = ({ headerLogo}) => (
     <header className="header">
-    <img src={headerLogo} className="headerLogo" alt="logo" />
+      <a href="https://staysmittentext.com/">
+        <img src={headerLogo} className="headerLogo" alt="logo"/>
+      </a>
     <section className="socialIcons">
       {/* <a className="facebookIcon" href="https://www.facebook.com/"></a> */}
       <a className="instaIcon" href="https://www.instagram.com/lovestaysmitten/"></a>
