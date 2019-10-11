@@ -1,4 +1,7 @@
 import React from 'react';
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-149854092-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
 import logo from './assets/img/logo/staySmittenLogo.png';
 import footerLogo from './assets/img/logo/StaySmittenSmallLogoTransparent.png'
 import './styles/App.css';
