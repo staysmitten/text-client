@@ -230,7 +230,7 @@ class UserPostForm extends Component {
           JOIN STAY SMITTEN
         </button>
         <p className="formDetails">Once We Launch, Couples Will Receive Daily 2-Part Text Messages, Giving You Both A Shared Moment Of Joy And Surprise In Your Busy Lives.</p>
-        <p className="formDetails">We are currently in beta test mode. If you would like to join Stay Smitten now and be a part of crafting our product into something couples all around the world want and love, please fill out the information above! </p>
+        <p className="formDetails">Join Stay Smitten now and be part of crafting our product into something couples all around the world want and love, please fill out the information above! </p>
       </form>
     );
   }
